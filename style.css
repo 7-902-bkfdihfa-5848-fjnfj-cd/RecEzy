@@ -32,6 +32,12 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: #f3f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
 }
 
 .logo {
@@ -62,13 +68,13 @@ body {
     line-height: 44px; 
 }
 
-
 .navbar a.active,
 .navbar a:hover {
     background: linear-gradient(55deg, #718DFE, #EDE2DB);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
 
 .home {
     width: 100%;
@@ -485,6 +491,15 @@ animation-delay: 2s;
     background: #e3ecfb;
     white-space: nowrap;
     position: relative;
+    text-align: center;
+}
+
+.logos-description {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 .logos:before,
