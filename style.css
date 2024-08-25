@@ -535,3 +535,8 @@ animation-delay: 2s;
     height: 50px;
     margin: 0 40px;
 }
+
+.wrapper {
+    padding: 500px 0;
+    display: flex;
+}
