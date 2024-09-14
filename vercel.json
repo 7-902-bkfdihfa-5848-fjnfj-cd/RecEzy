@@ -1,9 +1,7 @@
 {
     "rewrites": [
         { "source": "/", "destination": "/index.html" },
-        { "source": "/index.html", "destination": "/index.html" },
-        { "source": "/pricing.html", "destination": "/pricing.html" },
-        { "source": "/aboutus.html", "destination": "/aboutus.html" }
+        { "source": "/index.html", "destination": "/index.html" }
     ],
     "routes": [
         {
