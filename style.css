@@ -456,7 +456,7 @@ header {
 }
 
 .feature-box {
-    background: linear-gradient(55deg, rgb(255, 255, 255), #718DFE);
+    background: linear-gradient(55deg, rgba(154, 114, 254, 0.89), #718DFE);
     width: calc(33.33% - 20px); 
     height: 451px;
     border-radius: 10px;
@@ -475,7 +475,7 @@ header {
 }
 
 .feature-img {
-    background: linear-gradient(55deg, rgb(255, 255, 255), #718DFE);
+    background: linear-gradient(55deg, rgba(154, 114, 254, 0.89), #718DFE);
     height: 65%; 
     width: 100%;
     background-position: center; 
@@ -503,7 +503,7 @@ header {
 
 .feature-box-content p {
     font-size: 1rem;
-    color: gray;
+    color: #252424;
     line-height: 1.5;
 }
 
