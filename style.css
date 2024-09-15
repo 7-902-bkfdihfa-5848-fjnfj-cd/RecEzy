@@ -633,7 +633,7 @@ ul {
     background: linear-gradient(45deg, var(--dark-gradient), var(--colorsecond));
     height: 2px;
     box-sizing: border-box;
-    width: 80px;
+    width: 90px;
 }
 
 .footer-col ul li:not(:last-child) {
