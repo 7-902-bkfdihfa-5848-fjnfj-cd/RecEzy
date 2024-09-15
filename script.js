@@ -12,6 +12,7 @@ const navbar = document.querySelector('.navbar');
 const menuOverlay = document.getElementById('menu-overlay');
 const menuIconList = menuIcon.querySelector('.bx-list-ul');
 const menuIconX = menuIcon.querySelector('.bx-x');
+const navLinks = document.querySelectorAll('.navbar a');  
 
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
@@ -22,12 +23,22 @@ menuIcon.addEventListener('click', () => {
 });
 
 menuOverlay.addEventListener('click', () => {
+    closeMenu();
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenu();
+    });
+});
+
+function closeMenu() {
     navbar.classList.remove('active');
     menuOverlay.classList.remove('active');
     menuIcon.classList.remove('active');
     menuIconList.classList.remove('hidden');
     menuIconX.classList.remove('hidden');
-});
+}
 
 let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
