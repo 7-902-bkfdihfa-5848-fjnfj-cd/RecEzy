@@ -1,3 +1,5 @@
+// STICKY TRANSPARENT NAVBAR
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 0) {
@@ -6,6 +8,8 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+
+// HAMBURGER MENU CODE
 
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
@@ -48,3 +52,25 @@ let observer = new IntersectionObserver((entries, observer) => {
       }
     });
   }, { threshold: 0.1 });
+
+  // OFFSET SCROLL BEHAVIOUR SMOOTH #HOME LINKS
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const offset = 120; 
+
+        window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// PREVENT RIGHT CLICKS
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+}) 
