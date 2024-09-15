@@ -8,6 +8,7 @@
     <title>RecEzy</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/b228c5fdf5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,10 +17,10 @@
         <a href="#" class="logo">RecEzy</a>
 
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">About Us</a>
-            <a href="#">Pricing</a>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About Us</a>
+            <a href="#pricing">Pricing</a>
             <a href="#">Contact</a>
         </nav>
 
@@ -32,11 +33,11 @@
         <div class="menu-overlay" id="menu-overlay"></div>
     </header>
 
-    <div class="home-content">
+    <div class="home-content" id="home">
         <div class="text-container">
             <h1>Revolutionizing <br> Recruitment <br> with <br> Intelligent <br> Automation</h1>
             <p>Eko, our AI-enabled bot, is transforming the recruitment <br> process to be simpler, faster, and more efficient</p>
-            <a href="#" class="btn">Learn More</a>
+            <a href="#features" class="btn">Learn More</a>
         </div>
         <img src="https://i.imgur.com/t4Lwof0.png" alt="Revolutionizing Recruitment" class="hero-img">
     </div>
@@ -70,13 +71,12 @@
         </div>
     </div>
     
-    <div class="feature-section">
+    <div class="feature-section" id="features">
         <div class="feature-header">
             <h3>POWERFUL FEATURES</h3>
             <p>We offer a Smart AI that can help you with everyday tasks.</p>
         </div>
         <div class="feature-boxes">
-            <!-- Box 1 -->
             <div class="feature-box">
                 <div class="feature-img">
                     <img src="advancedanalytics.png" alt="">
@@ -87,7 +87,6 @@
                 </div>
             </div>
     
-            <!-- Box 2 -->
             <div class="feature-box">
                 <div class="feature-img">
                     <img src="jobintegrations.png" alt="">
@@ -98,7 +97,6 @@
                 </div>
             </div>
     
-            <!-- Box 3 -->
             <div class="feature-box">
                 <div class="feature-img">
                     <img src="diverse.png" alt="">
@@ -111,57 +109,121 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-top">
-            <div class="logo-container">
-                <img src="footerlogo.png" alt="RecEzy Logo">
-                <div class="footer-texts">
-                    <h1>RecEzy</h1>
-                    <p>Custom recruitment AI Bot</p>
+    <div class="line1"></div>
+
+    <div class="about-section" id="about">
+        <div class="about-header">
+            <h3>ABOUT US</h3>
+            <p>The RecEzy team is committed to developing cutting-edge AI that stands out for its excellence and innovation.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+          <i class="fa-solid fa-box"></i>
+          <h3>Multiple Data Sources</h3>
+          <p>Import data from multiple sources to train your chatbot.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-paintbrush"></i>
+          <h3>Customizations</h3>
+          <p>Customize your chatbot’s look and feel to match your brand’s style and website design.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-tag"></i>
+          <h3>Whitelabel</h3>
+          <p>Remove Chatbase branding and use a custom domain.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-fingerprint"></i>
+          <h3>Privacy & Security</h3>
+          <p>Your data is hosted on secure servers with robust encryption and access control.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-rotate"></i>
+          <h3>Auto-Retrain</h3>
+          <p>Set your chatbot to retrain automatically and always be synced with your data.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <h3>Integrations</h3>
+          <p>Connect your chatbot to your favorite tools like Slack, WhatsApp, Zapier, and more.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-regular fa-star"></i>
+          <h3>Powerful AI Models</h3>
+          <p>Choose from a variety of AI models, including GPT-4.0, Claude 3.5 Sonnet, and Gemini 1.5 Pro.</p>
+        </div>
+      
+        <div class="box">
+          <i class="fa-solid fa-language"></i>
+          <h3>80+ Languages</h3>
+          <p>Reach your customers in their native language even if your data is in a different language.</p>
+        </div>
+      </div>
+      
+
+    <div class="line2"></div>
+
+    <div class="pricing-section" id="pricing">
+        <div class="pricing-header">
+            <h3>PRICING</h3>
+            <p>Our Prices</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Trust Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Email: info@adevtechcorp.com</a></li>
+                        <li><a href="#">Phone Number: 12345678910</a></li>
+                        <li><a href="#">Location: jum jum hafen</a></li>
+                        <li><a href="#">Cham cham chum chum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-mediaft">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-buttons">
-                <div class="social-icons">
-                    <div class="social-box">
-                        <a href="#" class='bx bxl-instagram'></a>
-                    </div>
-                    <div class="social-box">
-                        <a href="#" class='bx bxl-facebook'></a>
-                    </div>
-                    <div class="social-box">
-                        <a href="#" class='bx bxl-linkedin'></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-links">
-            <div class="column">
-                <h2>Product</h2>
-                <a href="#" class="footer-link">Pricing</a>
-                <a href="#" class="footer-link">Security</a>
-                <a href="#" class="footer-link">Affiliates</a>
-            </div>
-            <div class="column">
-                <h2>Contact</h2>
-                <a href="#" class="footer-link">E-Mail</a>
-                <a href="#" class="footer-link">Phone-Number</a>
-                <a href="#" class="footer-link">Location</a>
-            </div>
-            <div class="column">
-                <h2>Company</h2>
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link">Terms of Service</a>
-                <a href="#" class="footer-link">Cookie Policy</a>
-                <a href="#" class="footer-link">‎ </a>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; Alexandru & Nishanth. All rights reserved.</p>
         </div>
     </footer>
     
+    <div class="copyright">
+        &copy; Alexandru & Nishanth. All rights reserved.
+    </div>    
 
     <script>
         window.embeddedChatbotConfig = {
