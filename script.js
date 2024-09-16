@@ -114,7 +114,6 @@ toggleInput.addEventListener('change', function() {
 
 // PREVENT RIGHT CLICKS
 
-/*
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
-}) */
+}) 
