@@ -69,8 +69,52 @@ let observer = new IntersectionObserver((entries, observer) => {
     });
 });
 
+// PRICING SWITCHER
+
+// Grab the toggle switch and pricing elements
+const toggleInput = document.querySelector('#check');
+const standardPrice = document.querySelector('#standard');
+const proPrice = document.querySelector('#pro');
+const elitePrice = document.querySelector('#elite');
+
+// Add an event listener to the toggle switch
+toggleInput.addEventListener('change', function() {
+    // If the toggle is checked, switch to yearly pricing
+    if (this.checked) {
+        // Set yearly prices
+        standardPrice.innerHTML = '600';
+        proPrice.innerHTML = '840';
+        elitePrice.innerHTML = '1,080';
+    } else {
+        // Set back to monthly prices
+        standardPrice.innerHTML = '50';
+        proPrice.innerHTML = '70';
+        elitePrice.innerHTML = '90';
+    }
+});
+
+
+const priceLabels = document.querySelectorAll('.price-label');
+
+// Define monthly and yearly label texts
+const labels = {
+    monthly: 'Per month',
+    yearly: 'Per year'
+};
+
+// Add an event listener to the toggle switch
+toggleInput.addEventListener('change', function() {
+    // Update labels based on the toggle state
+    priceLabels.forEach(label => {
+        label.textContent = this.checked ? labels.yearly : labels.monthly;
+    });
+});
+
+
+
 // PREVENT RIGHT CLICKS
 
+/*
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
-}) 
+}) */
