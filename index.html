@@ -9,10 +9,58 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/b228c5fdf5.js" crossorigin="anonymous"></script>
+
+        <style>
+        .devtools-warning {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 <body>
 
+        <div class="devtools-warning" id="devtoolsWarning">
+        Please do not open devtools.
+    </div>
+
+        <script>
+        // Function to detect if devtools is open
+        function detectDevTools() {
+            const threshold = 160; // Threshold width in pixels to consider devtools open
+            const devtoolsWarning = document.getElementById('devtoolsWarning');
+
+            // Detecting if the devtools are open
+            let isDevToolsOpen = false;
+
+            setInterval(() => {
+                const width = window.innerWidth;
+                if (width < threshold) {
+                    isDevToolsOpen = true;
+                    devtoolsWarning.style.display = 'block';
+                } else {
+                    if (isDevToolsOpen) {
+                        devtoolsWarning.style.display = 'none';
+                    }
+                }
+            }, 1000);
+        }
+
+        // Execute the function to detect devtools
+        detectDevTools();
+    </script>
+
+    
     <header class="header">
         <a href="#" class="logo">RecEzy</a>
 
