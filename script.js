@@ -115,24 +115,3 @@ toggleInput.addEventListener('change', function() {
 // PREVENT RIGHT CLICKS
 
 
-(function() {
-    let devToolsOpened = false;
-
-    // Detect when DevTools are open using the console size trick
-    const detectDevTools = () => {
-        const threshold = 160;  // Set threshold to detect a suspiciously small viewport (which happens when DevTools is open)
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-
-        if (widthThreshold || heightThreshold) {
-            devToolsOpened = true;
-            window.location.href = "https://www.example.com";  // Redirect to example.com
-        }
-    };
-
-    // Monitor resizing (happens when DevTools is opened)
-    window.onresize = detectDevTools;
-
-    // Repeated check for DevTools at an interval
-    setInterval(detectDevTools, 500);
-})();
