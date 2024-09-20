@@ -411,7 +411,7 @@ header {
 
 @media (max-width: 600px) {
     .btn::before, .btn::after {
-        background: linear-gradient(55deg, rgba(113, 141, 254, 0.5), var(--colorsecond)); 
+        background: linear-gradient(55deg, var(--dark-gradient), var(--colorsecond)); 
     }
 
     .logos:before {
