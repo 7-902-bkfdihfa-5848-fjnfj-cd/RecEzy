@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --background-color: #f3f7fa;
+    --dark-background: #09090b;
+    --blueish-background: #e3ecfb;
+    --text-color: #000000;
+    --dark-gradient: #718DFE;
+    --colorsecond: #9A72FE;
+    --light-gradient: #EDE2DB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: #f3f7fac7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(55deg, var(--dark-gradient), var(--colorsecond));
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 150; 
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); 
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-icon .bx-x {
+    display: none; 
+}
+
+.menu-icon.active .bx-list-ul {
+    display: none; 
+}
+
+.menu-icon.active .bx-x {
+    display: inline; 
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        height: 100vh;
+        background-color: var(--background-color);
+        flex-direction: column;
+        width: 250px; 
+        padding-top: 80px;
+        transition: right 0.4s ease;
+        z-index: 150; 
+    }
+
+    .navbar.active {
+        right: 0; 
+    }
+
+    .navbar a {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu-icon.active .bx-list-ul {
+        display: none;
+    }
+
+    .menu-icon.active .bx-x {
+        display: inline;
+    }
+
+    .menu-icon .bx-x {
+        display: none;
+    }
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-container h1 {
+    font-size: 2.5rem; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.1rem; 
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.hero-img {
+    display: none; 
+    width: 593px;
+    height: auto; 
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px; 
+    margin-left: 0px; 
+    width: 180px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 19px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(55deg, var(--dark-gradient), var(--colorsecond), var(--dark-gradient)); 
+    background-size: 200%;
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 10px;
+    filter: blur(5px);
+    transition: .5s ease;
+}
+
+.btn:hover::before {
+    background-position: 100% 0;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(55deg, var(--dark-gradient), var(--colorsecond), var(--dark-gradient)); 
+    background-size: 200%;
+    background-position: 0 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.btn:hover::after {
+    background-position: 100% 0;
+}
+
+@media (min-width: 901px) and (max-width: 960px) {
+    .home-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 100px 30px; 
+    }
+
+    .text-container {
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    .text-container h1 {
+        font-size: 2.8rem;
+    }
+
+    .text-container p {
+        font-size: 1.2rem; 
+    }
+
+    .hero-img {
+        display: block; 
+        width: 650px; 
+        height: auto; 
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1125px) {
+    .home-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 100px 40px; 
+    }
+
+    .text-container {
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    .text-container h1 {
+        font-size: 3rem; 
+    }
+
+    .text-container p {
+        font-size: 1.2rem;
+    }
+
+    .hero-img {
+        display: block;
+        width: 700px; 
+        height: auto;
+    }
+}
+
+@media (min-width: 1125px) {
+    .home-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 100px 100px;
+    }
+
+    .text-container {
+        margin-right: 40px;
+        text-align: left;
+    }
+
+    .text-container h1 {
+        font-size: 4rem;
+    }
+
+    .text-container p {
+        font-size: 1.4rem; 
+    }
+
+    .hero-img {
+        display: block; 
+        width: 800px; 
+        height: auto; 
+    }
+}
