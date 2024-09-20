@@ -1,3 +1,17 @@
+// scroll reveal
+
+ScrollReveal({
+    reset: false,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.hero-img, .feature-header h3, .feature-header p, .about-header h3, .about-header p, .pricing-header h3, .pricing-header p' , { origin: 'top' });
+ScrollReveal().reveal('.btn, .box', { origin: 'bottom' }); 
+ScrollReveal().reveal('.text-container h1', { origin: 'left' }); 
+ScrollReveal().reveal('.text-container p', { origin: 'right' }); 
+
 // STICKY TRANSPARENT NAVBAR
 
 window.addEventListener('scroll', function() {
@@ -71,22 +85,17 @@ let observer = new IntersectionObserver((entries, observer) => {
 
 // PRICING SWITCHER
 
-// Grab the toggle switch and pricing elements
 const toggleInput = document.querySelector('#check');
 const standardPrice = document.querySelector('#standard');
 const proPrice = document.querySelector('#pro');
 const elitePrice = document.querySelector('#elite');
 
-// Add an event listener to the toggle switch
 toggleInput.addEventListener('change', function() {
-    // If the toggle is checked, switch to yearly pricing
     if (this.checked) {
-        // Set yearly prices
         standardPrice.innerHTML = '600';
         proPrice.innerHTML = '840';
         elitePrice.innerHTML = '1,080';
     } else {
-        // Set back to monthly prices
         standardPrice.innerHTML = '50';
         proPrice.innerHTML = '70';
         elitePrice.innerHTML = '90';
@@ -96,21 +105,21 @@ toggleInput.addEventListener('change', function() {
 
 const priceLabels = document.querySelectorAll('.price-label');
 
-// Define monthly and yearly label texts
 const labels = {
     monthly: 'Per month',
     yearly: 'Per year'
 };
 
-// Add an event listener to the toggle switch
 toggleInput.addEventListener('change', function() {
-    // Update labels based on the toggle state
     priceLabels.forEach(label => {
         label.textContent = this.checked ? labels.yearly : labels.monthly;
     });
 });
 
 
-
 // PREVENT RIGHT CLICKS
 
+/*
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+}) */
