@@ -1,4 +1,16 @@
+// scroll reveal
 
+ScrollReveal({
+    reset: false,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.feature-header h3, .feature-header p, .about-header h3, .about-header p, .pricing-header h3, .pricing-header p' , { origin: 'top' });
+ScrollReveal().reveal('.btn, .box', { origin: 'bottom' }); 
+ScrollReveal().reveal('.text-container h1', { origin: 'left' }); 
+ScrollReveal().reveal('.text-container p', { origin: 'right' }); 
 
 // STICKY TRANSPARENT NAVBAR
 
