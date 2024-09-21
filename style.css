@@ -194,10 +194,34 @@ header {
 }
 
 .hero-img {
-    display: none; 
+    display: block; 
     width: 593px;
-    height: auto; 
+    height: auto;
+    transform: translateZ(-50px); 
+    opacity: 0; 
+    animation: popup 1s 1s forwards, float 5s 2s infinite; 
 }
+
+@keyframes popup {
+    0% {
+        transform: translateZ(-50px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateZ(0); 
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+}
+
 
 .btn {
     position: relative;
@@ -998,7 +1022,7 @@ hr {
 }
 
 .price-card .price:before {
-    content: '$ ';
+    content: '₹ ';
 }
 
 .btnpricing {
@@ -1011,8 +1035,21 @@ hr {
     transition: .3s ease-in-out;
 }
 
+/*
+--dark-gradient: #718DFE;
+--colorsecond: #9A72FE;
+--light-gradient: #EDE2DB; */
+
 .bg-accent {
-    background: linear-gradient(55deg, var(--dark-gradient), var(--colorsecond));
+    background: linear-gradient(175deg, #8a9ff3, #6e45d6);
+}
+
+.bg-blue {
+    background: #8a9ff3;
+}
+
+.bg-mix3 {
+    background: linear-gradient(175deg, #8a9ff3, #9A72FE, #e2cec2);
 }
 
 .btn-accent {
