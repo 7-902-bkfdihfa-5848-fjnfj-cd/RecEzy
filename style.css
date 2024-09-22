@@ -194,7 +194,7 @@ header {
 }
 
 .hero-img {
-    display: block; 
+    display: none; 
     width: 593px;
     height: auto;
     transform: translateZ(-50px); 
@@ -301,7 +301,7 @@ header {
 
     .hero-img {
         display: block; 
-        width: 650px; 
+        width: 450px; 
         height: auto; 
     }
 }
@@ -329,10 +329,27 @@ header {
 
     .hero-img {
         display: block;
-        width: 700px; 
+        width: 500px; 
         height: auto;
     }
 }
+
+@media (min-width: 1126px) and (max-width: 1342px) {
+    .hero-img {
+        display: block;
+        width: 600px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 1126px) and (max-width: 1156px) {
+    .hero-img {
+        display: block;
+        width: 550px !important;
+        height: auto !important;
+    }
+}
+
 
 @media (min-width: 1125px) {
     .home-content {
