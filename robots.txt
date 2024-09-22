@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /sitemap.xml
+Disallow: /*.css
+Disallow: /*.js
 Allow: /index.html
 Allow: /contact.html
