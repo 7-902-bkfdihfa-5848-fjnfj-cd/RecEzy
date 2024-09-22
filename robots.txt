@@ -1,5 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /sitemap.xml
 Allow: /index.html
 Allow: /contact.html
-Sitemap: https://recezy.vercel.app/sitemap.xml
